@@ -1,4 +1,3 @@
 npm test
 #!/bin/sh
-cd BE
 npm run eslint
