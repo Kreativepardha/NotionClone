@@ -1,11 +1,13 @@
-import { Router } from "express"
-import { LoginController, RegisterController } from "../controllers/userController"
-import { AuthLimiter } from "../utils/config/rateLimit"
+import { Router } from 'express';
+import {
+  LoginController,
+  RegisterController,
+} from '../controllers/userController';
+import { AuthLimiter } from '../utils/config/rateLimit';
 
+const router = Router();
 
-const router = Router()
+router.use('/register', AuthLimiter, RegisterController);
+router.use('/login', AuthLimiter, LoginController);
 
-router.use('/register', AuthLimiter,RegisterController)
-router.use('/login', AuthLimiter,LoginController)
-
-export { router as UserRouter }
+export { router as UserRouter };

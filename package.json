@@ -1,7 +1,13 @@
-{
+{ 
+  "scripts": {
+	   "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+  },
   "dependencies": {
+    "husky": "^9.1.6",
     "jsonwebtoken": "^9.0.2"
   },
+ 
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.6"
   }
