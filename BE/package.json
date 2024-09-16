@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "dev": "nodemon src/index.ts",
+    "eslint": "npx eslint ./",
+    "format:check": "prettier . --check",
+    "format:fix": "prettier . --fix"
   },
   "keywords": [],
   "author": "",
